@@ -1,0 +1,17 @@
+import cv2
+
+camera = cv2.VideoCapture(0)
+
+while True:
+    return_value, image = camera.read()
+    cv2.imshow('image', image)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+
+camera.release()
+cv2.destroyAllWindows()
+
+
+#This code captures images from the default camera (index 0) and displays them in a window. 
+#The loop continues until the user presses the ‘q’ key. 
+#You can modify the code to save the images as files or perform other operations on them.
