@@ -1,0 +1,11 @@
+import cv2
+
+camera = cv2.VideoCapture(0)
+return_value, image = camera.read()
+cv2.imwrite('image.png', image)
+del(camera)
+
+
+#This code captures an image from the default camera (index 0) and saves it as image.png. 
+#You can modify the code to capture images at regular intervals or on a button press. 
+#You can also use the imshow() function to display the captured image.
